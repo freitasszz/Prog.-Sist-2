@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import java.math.BigDecimal;
 class Main {
   public static void main (String[] args) throws SQLException {
-    //read();
-    //create();
-    //update();
+    read();
+    create();
+    update();
     delete();
   }
   public static void delete() throws SQLException {
