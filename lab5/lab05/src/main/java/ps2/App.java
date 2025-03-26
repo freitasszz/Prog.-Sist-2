@@ -1,4 +1,4 @@
-package ps2.lab05;
+package ps2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -52,11 +52,11 @@ public class App implements CommandLineRunner {
 		String nome = entrada.nextLine();
 		out.print("# CPF do novo titular: ");
 		String cpf = entrada.nextLine();
-		Titular t = new Titular(id, nome, cpf);
+		TitularRepo t = new titular (id, nome, cpf);
 		titularRepo.save(t);
 	}
 	public void lerTodos() {
-		Iterable<Titular> titulares=titularRepo.findAll();
+		Iterable<TitularRepo> titulares=titularRepo.findAll();
 		out.println("titulares cadastrados: ");
 		for(Titular t: titulares){
 			out.println(t.getId() + " - " + t.getNome() + " - " + t.getCpf() );
